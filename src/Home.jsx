@@ -1,14 +1,14 @@
 import Card from './Card'
 import ContactBanner from './ContactBanner'
-
+import cards from './assets/cards'
 function Home() {
-
   return (
     <main>
       <section className="home"></section>
       <ContactBanner />
-      <Card title="Hormigón y morteros"/>
-      <Card title="Materiales de construcción"/>
+      <section className="services">
+      { cards.map(c => <Card key={c.id} content={c}/>) }
+      </section>
     </main>
   )
 }

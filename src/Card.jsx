@@ -1,14 +1,15 @@
-function Card({title}) {
+function Card({content}) {
 
   return (
-    <div className="card">
+    <article className="card">
+      <div style={{ backgroundImage: `url(${content.image})` }}></div>
       <div>
-      <h3>{title}</h3>
-      <span></span>
+        <h3 title={content.title}>{content.title}</h3>
+        <p title={content.paragraph}>{content.paragraph}</p>
       </div>
-      <a href="">Ver más</a>
-    </div>
+    </article>
   )
+
 }
 
 export default Card
